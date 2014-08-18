@@ -1,0 +1,94 @@
+*
+{
+	box-sizing: border-box;
+	font-size:80px;
+}
+
+
+body
+{
+	width: 100%;
+	margin:0;
+	padding:0;
+	border:0;
+	
+}
+
+#page
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+header
+{
+	display:block;
+	padding:0;
+	margin:0;
+	width:100%;
+	
+}
+
+header h1 #CN
+{
+	font-size:125%;
+	display:inline;
+	color:#007ACC;
+}
+
+header h1 #nails_and_spa
+{
+	font-size:100%;
+	display:inline;
+	color:#6B0000;
+}
+
+
+a
+{
+	text-decoration: none;
+	color:black;
+}
+
+#contact_info
+{
+	/* border-image:linear-gradient(to right, #CF0000 0%, #990000 100%); */
+	display:block;
+}
+h2
+{
+	background-color:#6B0000;
+	font-size:100%;
+	color:white;
+	margin:0px;
+	padding:20px 0 0 0;
+}
+#contact_info h2
+{
+	
+}
+
+
+
+#hours_info
+{
+	/* border-image:linear-gradient(to right, #CF0000 0%, #990000 100%); */
+	display:block;
+}
+
+#hours_info h2
+{
+
+}
+
+#footer
+{
+	background-image: linear-gradient(to top, #FFFFFF 0%, #C7C7C7 150%);
+}
+
+#footer h2
+{
+	background-color:black;
+	color:white;
+}
