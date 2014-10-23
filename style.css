@@ -145,14 +145,13 @@ a
 	/* border: solid white 8px; */
 }
 
-#contact_info
+.h2_area
 {
 	border-top: solid #990000 20px;
 	/* border-image:linear-gradient(to right, #CF0000 0%, #990000 100%); */
 	clear:both;
 }
-
-#contact_info h2
+.h2_area h2
 {
 	background-image:linear-gradient(#990000, #6B0000);
 	/* background-color:#990000; */
@@ -162,26 +161,6 @@ a
 	font-size:50px;
 	
 }
-
-
-
-#hours_info
-{
-	border-top: solid #990000 20px;
-	/* border-image:linear-gradient(to right, #CF0000 0%, #990000 100%); */
-	clear:both;
-}
-
-#hours_info h2
-{
-	background-image:linear-gradient(#990000, #6B0000);
-	/* background-color:#990000; */
-	margin:0px;
-	padding:0px;
-	color:white;
-	font-size:50px;
-}
-
 #footer
 {
 	background-image: linear-gradient(to top, #FFFFFF 0%, #C7C7C7 150%);
