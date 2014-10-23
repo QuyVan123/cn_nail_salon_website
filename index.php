@@ -47,7 +47,7 @@ function echo_ext_files()
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$(".myslides").cycle({
-			fit: 1, timeout: 4000
+			fit: 1, timeout: 8000
 		});			
 	});
 
@@ -66,8 +66,9 @@ function echo_page_body()
 	echo '
 	<div id="rest_of_page">';
 	echo_slider();
-	echo_contact_info();
 	echo_hours();
+	echo_location();
+	echo_contact_info();
 	echo_footer();
 	echo
 		'</div></div></div></body></html>';
@@ -78,7 +79,7 @@ function echo_top_of_page()
 	echo '
 	
 		<header>
-			<a href="http://localhost/nail-temp-custom/"><img src="images/CN.png" id="header_logo"></a>';
+			<a href="' . INDEX_URL . '"><img src="images/CN.png" id="header_logo"></a>';
 
 			
 	echo_user_nav();		
@@ -92,9 +93,10 @@ function echo_user_nav()
 		
 	echo '<ul>
 	
-
-		<li><a id="nav-item" href="#contact_info_link">Contact Info</a></li>
-		<li><a id="nav-item" href="#hours_info_link">Hours Info</a></li>';
+	
+		<li><a id="nav-item" href="#hours_info_link">Hours</a></li>
+		<li><a id="nav-item" href="#location_info_link">Location</a></li>
+		<li><a id="nav-item" href="#contact_info_link">Contact</a></li>';
 	echo '</ul></nav>';
 }
 
