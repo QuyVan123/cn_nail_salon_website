@@ -15,19 +15,23 @@ function mobile_check()
 }
 function echo_page()
 {
+	echo'
+		<!DOCTYPE html>
+		<html lang="en">';
+	
 	echo_file_header();
 	
 	
-	echo_page_body();
+	echo_file_body();
+	echo '
+		</html>';
 	
 }
 
 function echo_file_header()
 {
-	echo'
-		<!DOCTYPE html>
-		<html lang="en">
-		<head>
+	echo '
+	<head>
 		<title>' . WEBSITE_NAME . '</title>
 		<meta charset=\'UTF-8\'>';
 		
@@ -40,7 +44,12 @@ function echo_ext_files()
 {
 
 	echo '
-		<link href=\'' . STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>';
+		<link href=\'' . GLOBAL_STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>
+		
+		<link href=\'' . PAGE_HEADER_STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>
+		<link href=\'' . CONTENT_STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>
+		
+		';
 	echo '
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="scripts/location_map.js" type="text/javascript"></script>
@@ -49,30 +58,27 @@ function echo_ext_files()
 	<script src="scripts/image_slider_misc.js" type="text/javascript"></script>';
 }
 
-function echo_page_body()
+function echo_file_body()
 {
 	echo '
-		</head>
-		<body>
-			<div id=\'page\'>';
+		<body>';
 	
 	echo_top_of_page();
 	echo '
-	<div id="rest_of_page">';
+				<div id="rest_of_page">';
 	echo_main_image_area();
 	echo_services_info_area();
 	echo_location_and_hours_info_area();
 	echo_footer_info_area();
 	echo
-		'</div></div></div></body></html>';
+		'</div><body>';
 }
 
 function echo_top_of_page()
 {
 		echo '
-		
 			<header>
-				<a href="' . INDEX_URL . '"><img src="images/CN.png" id="header_logo"></a>';
+			<a href="' . INDEX_URL . '"><img src="images/CN.png" id="header_logo"></a>';
 
 		echo_phone_number_area();
 		echo_user_nav();		
@@ -100,16 +106,16 @@ function echo_main_image_area()
 	{   
 		$directory = 'images/slideshow1';  	
 		echo '
-		<div class="myslides">';	
+			<div class="myslides">';	
 		echo_images($directory);
 		echo '
-		</div>';
+			</div>';
 	
 		}	
 	catch(Exception $e) 
 	{
 		echo '
-		There was an error loading the slideshows. <br />' . $e->getMessage();	
+			There was an error loading the slideshows. <br />' . $e->getMessage();	
 	}
 	echo '
 		</div>';
@@ -145,7 +151,10 @@ function echo_location_and_hours_info_area()
 		<a class="anchor" id="location_and_hours_info_link"></a>';
 	echo '
 		<h2>Location and Hours</h2>';
-	echo_location_map();
+	echo '
+		<span id="map_canvas">';
+	echo '
+		</span>';
 	echo_location_info();
 	echo_hours_info();
 	echo'
@@ -159,17 +168,20 @@ function echo_footer_info_area()
 {
 	echo '
                 <div id="footer">';
-        echo "
+        /*echo "
 		<h2>Footer</h2>";
+	*/
 	echo_footer_info();
+	echo '
+		</div>';
 }
 function echo_phone_number_area()
 {
 	echo '
-		<div id="phone_number_area">';	
+		<span id="phone_number_area">';	
 	echo_phone_number();
 	echo '
-		</div>';
+		</span>';
 
 }
 
