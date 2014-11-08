@@ -1,44 +1,49 @@
 <?php
-function echo_contact_info()
+function echo_phone_number()
 {
 	echo '
-	<div class="h2_area" id="contact_info">
-	<a class="anchor" id="contact_info_link"></a>';
-	echo '<h2 >Contact Info</h2>';
-	echo 'test<br><br><br>tsfdsfd<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc';
+		(403) 346-0551';
+}
+function echo_services_info()
+{
+	echo'
+		Services info area';
+}
+
+function echo_hours_info()
+{
+	echo '	
+		Walks ins and appointments welcome. <br>
+		Monday: 9:30am - 7:00pm <br>
+		Tuesday: 9:30am - 7:00pm <br>
+		Wednesday: 9:30am - 7:00pm <br>
+		Thursday: 9:30am - 7:00pm<br>
+		Friday: 9:30am - 7:00pm<br>
+		Saturday: 10:00am - 6:00pm<br>
+		Sunday: Closed<br>';	
+}
+
+function echo_location_info()
+{
+	echo '
+		7110 50 Ave 
+		Red Deer, AB';
+}
+
+function echo_location_map()
+{
+	echo '
+		<div id="map_canvas">';
+		
+
 	echo '
 		</div>';
 }
 
-function echo_hours()
+function echo_footer_info()
 {
 	echo '
-		<div class="h2_area" id="hours_info">
-		<a class="anchor" id="hours_info_link"></a>';
-	echo '<h2>Hours Info</h2>';
-	echo 'test<br><br><br>tsfdsfd<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc';
-	echo '
-		</div>';
-}
-
-function echo_location()
-{
-	echo '
-		<div class="h2_area" id="location_info">
-		<a class="anchor" id="location_info_link"></a>';
-	echo '<h2>Location</h2>';
-	echo 'test<br><br><br>tsfdsfd<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc';
-	echo '
-		</div>';
-
-}
-
-function echo_footer()
-{
-	echo '
-		<div id="footer">';
-	echo "<h2>Footer</h2>";
-	echo '<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc';
+		<br><br><br><br>abc<br><br><br><br>abc<br><br><br><br>abc';
 }
 
 ?>

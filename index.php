@@ -42,18 +42,12 @@ function echo_ext_files()
 	echo '
 		<link href=\'' . STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>';
 	echo '
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="scripts/location_map.js" type="text/javascript"></script>
 	<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery.cycle.lite.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$(".myslides").cycle({
-			fit: 1, timeout: 8000
-		});			
-	});
-
-	</script>';
+	<script src="scripts/image_slider_misc.js" type="text/javascript"></script>';
 }
-
 
 function echo_page_body()
 {
@@ -65,26 +59,25 @@ function echo_page_body()
 	echo_top_of_page();
 	echo '
 	<div id="rest_of_page">';
-	echo_slider();
-	echo_hours();
-	echo_location();
-	echo_contact_info();
-	echo_footer();
+	echo_main_image_area();
+	echo_services_info_area();
+	echo_location_and_hours_info_area();
+	echo_footer_info_area();
 	echo
 		'</div></div></div></body></html>';
 }
 
 function echo_top_of_page()
 {
-	echo '
-	
-		<header>
-			<a href="' . INDEX_URL . '"><img src="images/CN.png" id="header_logo"></a>';
+		echo '
+		
+			<header>
+				<a href="' . INDEX_URL . '"><img src="images/CN.png" id="header_logo"></a>';
 
-			
-	echo_user_nav();		
-	echo '
-		</header>';
+		echo_phone_number_area();
+		echo_user_nav();		
+		echo '
+			</header>';
 }
 function echo_user_nav()
 {
@@ -92,51 +85,93 @@ function echo_user_nav()
 		<nav id="menu">';
 		
 	echo '<ul>
-	
-	
-		<li><a id="nav-item" href="#hours_info_link">Hours</a></li>
-		<li><a id="nav-item" href="#location_info_link">Location</a></li>
-		<li><a id="nav-item" href="#contact_info_link">Contact</a></li>';
+		<li><a id="nav-item" href="#location_and_hours_info_link">Location</a></li>
+		<li><a id="nav-item" href="#location_and_hours_info_link">Hours</a></li>
+		<li><a id="nav-item" href="#services_info_link">Services</a></li>';
 	echo '</ul></nav>';
 }
 
 
-function echo_slider()
+function echo_main_image_area()
 {
 	echo '
-		<div id="slider">';
+		<div id="main_image_area">';
 	try 
 	{   
 		$directory = 'images/slideshow1';  	
 		echo '
 		<div class="myslides">';	
-		getImages($directory);
+		echo_images($directory);
 		echo '
 		</div>';
 	
-
-	}	
+		}	
 	catch(Exception $e) 
 	{
 		echo '
 		There was an error loading the slideshows. <br />' . $e->getMessage();	
 	}
-
-	
+	echo '
+		</div>';
+}
+function echo_images($directory)
+{
+	foreach ( new DirectoryIterator($directory) as $item ) 
+	{			
+		if ($item->isFile()) 
+		{
+			$path = $directory . '/' . $item;	
+			echo '<img src="' . $path . '"/>';	
+		}
+	}	
+}
+function echo_services_info_area()
+{
 		
-	
+	echo '
+		<div  id="services_info" class="h2_area">
+		<a class="anchor" id="services_info_link"></a>';
+	echo '
+		<h2 >Services Info</h2>';
+	echo_services_info();
+	echo '
+		</div>';
 }
 
-function getImages($directory)
-	{
-		foreach ( new DirectoryIterator($directory) as $item ) {			
-			if ($item->isFile()) {
-				$path = $directory . '/' . $item;	
-				echo '<img src="' . $path . '"/>';	
-			}
-		}	
-	}
+function echo_location_and_hours_info_area()
+{
+	echo '
+		<div id="location_and_hours_info" class="h2_area">
+		<a class="anchor" id="location_and_hours_info_link"></a>';
+	echo '
+		<h2>Location and Hours</h2>';
+	echo_location_map();
+	echo_location_info();
+	echo_hours_info();
+	echo'
+		</div>';
+}
+function echo_hours_chart()
+{
+	
+}
+function echo_footer_info_area()
+{
+	echo '
+                <div id="footer">';
+        echo "
+		<h2>Footer</h2>";
+	echo_footer_info();
+}
+function echo_phone_number_area()
+{
+	echo '
+		<div id="phone_number_area">';	
+	echo_phone_number();
+	echo '
+		</div>';
 
+}
 
 mobile_check();
 echo_page();

@@ -59,7 +59,8 @@ header
 #rest_of_page
 {
 	margin-top:100px;
-	background-color:#F6F6F2;
+	/*background-image: linear-gradient(to left, #FFFFFF 0%, #C7C7C7 190%);*/
+	/*background-color:#F6F6F2;*/
 	/* background-image:url(images/page_1_bg1.jpg); */
 }
 
@@ -117,7 +118,7 @@ a
 	color:black;
 }
 
-#slider
+#main_image_area
 {
 
 	color:green;
@@ -149,7 +150,9 @@ a
 {
 	border-top: solid #990000 20px;
 	/* border-image:linear-gradient(to right, #CF0000 0%, #990000 100%); */
+	background-size:cover;
 	clear:both;
+	display:block;
 }
 .h2_area h2
 {
@@ -163,6 +166,8 @@ a
 }
 #footer
 {
+	clear:both;
+	display:block;
 	background-image: linear-gradient(to top, #FFFFFF 0%, #C7C7C7 150%);
 }
 
@@ -171,3 +176,22 @@ a
 	background-color:black;
 	color:white;
 }
+#map_canvas
+{
+	margin: 20px 20px 20px 0px;
+	width: 600px;
+	height: 350px;
+	background-color: #CCC;
+	float: right;
+	border: 2px black solid;
+}
+#phone_number_area
+{
+	display: inline;	
+	font-size: 30px;
+	position:relative;
+	top:-70px;
+	color:#990000;
+	padding:10px;
+}
+
