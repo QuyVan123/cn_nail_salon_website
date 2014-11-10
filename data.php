@@ -19,16 +19,16 @@ function echo_services_info()
 function echo_hours_info()
 {
 	echo '
-		<p>	
-		Walks ins and appointments welcome. <br>
-		Monday: 9:30am - 7:00pm <br>
-		Tuesday: 9:30am - 7:00pm <br>
-		Wednesday: 9:30am - 7:00pm <br>
-		Thursday: 9:30am - 7:00pm<br>
-		Friday: 9:30am - 7:00pm<br>
-		Saturday: 10:00am - 6:00pm<br>
-		Sunday: Closed<br>
-		</p>';	
+		<p class="accent">Walks ins and appointments welcome.</p>
+		<table>
+		<tr><td>Monday:</td> <td>9:30am - 7:00pm </td>
+		<tr><td>Tuesday: </td> <td>9:30am - 7:00pm </td> 
+		<tr><td>Wednesday: </td> <td>9:30am - 7:00pm </td> 
+		<tr><td>Thursday: </td> <td>9:30am - 7:00pm</td> 
+		<tr><td>Friday: </td> <td>9:30am - 7:00pm</td> 
+		<tr><td>Saturday: </td> <td>10:00am - 6:00pm</td> 
+		<tr><td>Sunday: </td> <td>Closed</td> 		
+		</table>';	
 }
 
 function echo_location_info()
@@ -36,16 +36,13 @@ function echo_location_info()
 	echo '
 		<h3>CN Nails and Spa</h3>
 		<p>
-		7110 50 Ave <br>
-		Red Deer, AB <br>
+		7110 50 Ave, Red Deer AB <br>
 		</p>';
 }
 
 
 function echo_footer_info()
 {
-	echo '
-		<br><br><br><br><br><br><br><br><br><br><br><br>';
 }
 
 ?>

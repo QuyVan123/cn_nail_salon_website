@@ -1,0 +1,60 @@
+
+#location_and_hours_text_area
+{
+	background-image:url("../images/bg7.png");
+	margin: 30px 900px 0 100px;
+	padding:20px 0  ;
+	text-align:center;
+	position:relative;
+	border-radius:15px;
+	border: 5px solid #ccc;
+	box-shadow: 2px 2px 20px 5px;
+	/*box-shadow: 
+		0 0 0 5px hsl(360, 50%, 50%),
+		0 0 0 10px hsl(240, 50%, 50%);	
+	*/
+}
+#location_and_hours_text_area  p
+{
+	padding:0;
+	margin:5px 0;
+}
+
+#location_and_hours_text_area table
+{
+	margin: 0 auto;
+	border-spacing:0;
+	border:px #990000 solid;
+}
+#location_and_hours_text_area tr:nth-child(even)
+{
+}
+#location_and_hours_text_area tr:nth-child(odd)
+{
+	background: #E2E2D4;
+}
+
+#location_and_hours_text_area table td
+{
+	width: auto;
+	padding: 5px 10px;
+	font-size:20px;
+}
+
+#location_and_hours_text_area h3
+{
+	color:#0066CC;	
+	margin:0;
+	padding:0;
+	font-size:200%;
+}
+#location_and_hours_text_area .accent
+{
+	font-weight:bold;
+	color:#990000;
+	font-size:115%;
+	margin: 10px 0;
+}
+
+
+

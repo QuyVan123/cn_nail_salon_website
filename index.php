@@ -48,6 +48,7 @@ function echo_ext_files()
 		
 		<link href=\'' . PAGE_HEADER_STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>
 		<link href=\'' . CONTENT_STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>
+		<link href=\'' . LOCATION_AND_HOURS_INFO_STYLE_URL .'\' type=\'text/css\' rel=\'stylesheet\'>
 		
 		';
 	echo '
@@ -155,10 +156,12 @@ function echo_location_and_hours_info_area()
 		<span id="map_canvas">';
 	echo '
 		</span>';
+	echo '
+		<div id="location_and_hours_text_area">';
 	echo_location_info();
 	echo_hours_info();
 	echo'
-		</div>';
+		</div></div>';
 }
 function echo_hours_chart()
 {
