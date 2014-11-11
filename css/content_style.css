@@ -75,6 +75,7 @@
 }
 #map_canvas #info_window
 {
+	font-family:"Times New Roman", Times, serif;
 	width:102px;
 	height:auto;
 }

@@ -79,7 +79,8 @@ function echo_top_of_page()
 {
 		echo '
 			<header>
-			<a href="' . INDEX_URL . '"><img src="images/CN.png" id="header_logo"></a>';
+
+			<a href="#"><img src="images/CN.png" id="header_logo"></a>';
 
 		echo_phone_number_area();
 		echo_user_nav();		
@@ -92,9 +93,9 @@ function echo_user_nav()
 		<nav id="menu">';
 		
 	echo '<ul>
-		<li><a id="nav-item" href="#location_and_hours_info_link">Location</a></li>
-		<li><a id="nav-item" href="#location_and_hours_info_link">Hours</a></li>
-		<li><a id="nav-item" href="#services_info_link">Services</a></li>';
+		<li><a id="nav-item" href="#about_info_link">About</a></li>
+		<li><a id="nav-item" href="#services_info_link">Services</a></li>
+		<li><a id="nav-item" href="#location_and_hours_info_link">Location & Hours</a></li>';
 	echo '</ul></nav>';
 }
 

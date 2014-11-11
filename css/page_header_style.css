@@ -11,6 +11,7 @@ header
 	background-image: linear-gradient(to bottom, #FFFFFF 0%, #C7C7C7 150%);
 	/* background-image: radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #C7C7C7 100%); */
 	/* background-color:black; */
+	font-family: "Verdana", Times, serif;
 }
 
 #header_logo
@@ -35,11 +36,11 @@ header nav
 header nav ul
 {
 	margin:0;
-	margin-top:20px;
+	margin-top:30px;
 	padding:0;
 	list-style-type: none;
 
-	font-size:40px;
+	font-size:30px;
 }
 
 
@@ -47,13 +48,17 @@ header nav ul li
 {
 	display:inline;
 	margin:0;
-	padding:0;
-	padding-left: 5px;
+	padding:0 0 0 5px;
 	/* border-left:gray 1px solid; */
 	
 	border-width: 0 0 0 1px;
 	border-image:radial-gradient(ellipse farthest-corner at center, black, white)0 50;
 	
+}
+header nav ul li:last-child
+{
+	padding: 0 5px;
+	border-width: 0 1px;
 }
 
 header nav ul li #nav-item
