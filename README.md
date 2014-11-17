@@ -1,4 +1,4 @@
 Nail Salon Website
 
 Things to do:
-* create a mobile friendly version
+1. create a mobile friendly version
