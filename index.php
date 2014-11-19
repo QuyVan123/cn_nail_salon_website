@@ -56,6 +56,7 @@ function echo_ext_files()
 	<script src="scripts/location_map.js" type="text/javascript"></script>
 	<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery.cycle.lite.js" type="text/javascript"></script>
+	<script src="scripts/header_horizontal_scroll.js" type="text/javascript"></script>
 	<script src="scripts/image_slider_misc.js" type="text/javascript"></script>';
 }
 
@@ -66,21 +67,21 @@ function echo_file_body()
 	
 	echo_top_of_page();
 	echo '
-				<div id="rest_of_page">';
+		<div id="rest_of_page">';
 	echo_main_image_area();
 	echo_services_info_area();
 	echo_location_and_hours_info_area();
 	echo_footer_info_area();
-	echo
-		'</div><body>';
+	echo '
+		</div><body>';
 }
 
 function echo_top_of_page()
 {
 		echo '
-			<header>
+			<header id="main_nav">
 
-			<a href="#"><img src="images/CN.png" id="header_logo"></a>';
+				<a href="#"><img src="images/CN.png" id="header_logo"></a>';
 
 		echo_phone_number_area();
 		echo_user_nav();		

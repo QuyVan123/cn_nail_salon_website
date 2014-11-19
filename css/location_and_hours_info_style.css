@@ -1,10 +1,8 @@
 #location_and_hours_text_area
 {
 	background-image:url("../images/bg7.png");
-	margin: 30px 900px 0 100px;
-	padding:20px 0  ;
+	margin: 30px 0 0 100px;
 	text-align:center;
-	position:relative;
 	border-radius:15px;
 	border: 5px solid #ccc;
 	box-shadow: 2px 2px 20px 5px;
@@ -12,6 +10,7 @@
 		0 0 0 5px hsl(360, 50%, 50%),
 		0 0 0 10px hsl(240, 50%, 50%);	
 	*/
+	float:left;
 }
 #location_and_hours_text_area  p
 {
